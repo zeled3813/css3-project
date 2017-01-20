@@ -1,10 +1,11 @@
 #title {
     width: 100%;
     height: 100px;
-    background-color: #f48c42;
+    background: linear-gradient(to right, lightblue, yellow);
     border-radius: 15px 50px;
     position: fixed;
-    animation:title-animation 4s;
+    animation: title-animation 4s;
+    display: inline-block;
 }
 
 @keyframes title-animation {
@@ -19,16 +20,72 @@
     }
 }
 
-#right {
-    float: right;
-    position: relative;
+.t-title {
+    text-align: center;
+    animation: title-animation 4s;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
-@keyframes right-sword{
-    
+#curtain {
+    background: #f44242;
+    width: 100%;
+    height: 1000px;
+    animation: downward 4s;
+    position: static;
+    display: inline;
 }
 
-#left {
+@keyframes downward {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/*#right {*/
+
+
+/*    float: right;*/
+
+
+/*    position: relative;*/
+
+
+/*    display:inline;*/
+
+
+/*    transform: translate();*/
+
+
+/*top: 300px;*/
+
+
+/*    animation: title-animation 5s;*/
+
+
+/*}*/
+
+
+/*@keyframes right-sword {}*/
+
+#left-katana {
     float: left;
     position: relative;
+    display: inline;
+    top: 150px;
+    animation: title-animation 5s;
+    transition:transform 4s;
 }
+
+#left-katana:hover {
+    transform: rotate(360deg);
+}
+
+@keyframes left-sword {}
