@@ -1,14 +1,14 @@
 #title {
-    width: 100%;
+    width: 100%; /*The with of this div is equal to the total width of any resolution*/
     height: 100px;
-    background: linear-gradient(to right, lightblue, yellow);
-    border-radius: 15px 50px;
-    position: fixed;
-    animation: title-animation 4s;
-    display: inline-block;
+    background: linear-gradient(to right, lightblue, yellow);    /*The color of the background gradually turns from lightblue to yellow.*/
+    border-radius: 15px 50px; /*This line creates the unique border surrender the div*/
+    position: fixed;  /*This line gives the div a fixed position in which the div stays there even if you scroll up and down the page*/
+    animation: title-animation 4s; /*The duration of this animation is 4 seconds*/
+    display: inline-block; /*Makes the div to be an inline-block so the div could overlap with other inline divs*/
 }
-
-@keyframes title-animation {
+/*The opacity of a container or an object changes from invisible to visible over a period of time*/
+@keyframes title-animation { 
     0% {
         opacity: 0;
     }
@@ -21,59 +21,23 @@
 }
 
 .t-title {
-    text-align: center;
-    animation: title-animation 4s;
-    color: white;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    text-align: center; /*Keeps the texts in the center*/
+    animation: title-animation 4s; 
+    color: white; 
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; /*Gives the texts a shadow combined of black, blue, and darkblue*/
 }
 
-#curtain {
-    background: #f44242;
-    width: 100%;
-    height: 1000px;
-    animation: downward 4s;
-    position: static;
+#right-sword {
+    float: right;
+    position: relative;
     display: inline;
+    animation: title-animation 5s;
+    transition: transform 4s; /*The time it takes for the sword to transform is set to 4 seconds*/
 }
-
-@keyframes downward {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+/*Triggers when the mouse hovers over the div*/
+#right-sword:hover{
+    transform: scale(.5,.5) rotate(360deg); /*Increases or decreases the size and rotate the image*/
 }
-
-
-/*#right {*/
-
-
-/*    float: right;*/
-
-
-/*    position: relative;*/
-
-
-/*    display:inline;*/
-
-
-/*    transform: translate();*/
-
-
-/*top: 300px;*/
-
-
-/*    animation: title-animation 5s;*/
-
-
-/*}*/
-
-
-/*@keyframes right-sword {}*/
 
 #left-katana {
     float: left;
@@ -81,11 +45,10 @@
     display: inline;
     top: 150px;
     animation: title-animation 5s;
-    transition:transform 4s;
+    transition: transform 4s;
 }
 
 #left-katana:hover {
-    transform: rotate(360deg);
+    transform: scale(.5,.5) rotate(360deg);
 }
 
-@keyframes left-sword {}
